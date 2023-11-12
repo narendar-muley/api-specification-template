@@ -1,0 +1,88 @@
+#%RAML 1.0 Trait
+responses:
+  400:
+    body:
+      application/json:
+        type: !include ../types/common-error-response-format.raml
+        example: |
+
+            {
+                "errorDescription" : "Required field 'name' missing.",
+                "errorCode": "400",
+                "errorType" : "HTTP",
+                "errorDateTime": "2020-06-15T15:13:10",
+                "correlationId" : "6e560258-4e55-4839-b7d9-29c80f12263d"
+            }
+  404:
+    body:
+      application/json:
+        type: !include ../types/common-error-response-format.raml
+        example: |
+
+            {
+                "errorDescription" : "Resource Not Found",
+                "errorCode": "404",
+                "errorType" : "HTTP",
+                "errorDateTime": "2020-06-15T15:13:10",
+                "correlationId" : "6e560258-4e55-4839-b7d9-29c80f12263d"
+            }
+  405:
+    body:
+      application/json:
+        type: !include ../types/common-error-response-format.raml
+        example: |
+            {
+                "errorDescription" : "Method Not Allowed",
+                "errorCode": "405",
+                "errorType" : "HTTP",
+                "errorDateTime": "2020-06-15T15:13:10",
+                "correlationId" : "6e560258-4e55-4839-b7d9-29c80f12263d"
+            }
+  406:
+    body:
+      application/json:
+        type: !include ../types/common-error-response-format.raml
+        example: |
+            {
+                "errorDescription" : "Not Acceptable.",
+                "errorCode": "406",
+                "errorType" : "HTTP",
+                "errorDateTime": "2020-06-15T15:13:10",
+                "correlationId" : "6e560258-4e55-4839-b7d9-29c80f12263d"       
+                }
+  500:
+    body:
+      application/json:
+        type: !include ../types/common-error-response-format.raml
+        example: |
+            {
+                "errorDescription" : "Internal Server Error",
+                "errorCode": "500",
+                "errorType" : "HTTP",
+                "errorDateTime": "2020-06-15T15:13:10",
+                "correlationId" : "6e560258-4e55-4839-b7d9-29c80f12263d"
+                }
+  501:
+    body:
+      application/json:
+        type: !include ../types/common-error-response-format.raml
+        example: |
+            {
+                "errorDescription" : "Not Implemented.",
+                "errorCode": "501",
+                "errorType" : "HTTP",
+                "errorDateTime": "2020-06-15T15:13:10",
+                "correlationId" : "6e560258-4e55-4839-b7d9-29c80f12263d"
+            }
+  503:
+    body:
+      application/json:
+        type: !include ../types/common-error-response-format.raml
+        example: |
+            {
+                "errorDescription" : "Service Unavailable.",
+                "errorCode": "503",
+                "errorType" : "HTTP",
+                "errorDateTime": "2020-06-15T15:13:10",
+                "correlationId" : "6e560258-4e55-4839-b7d9-29c80f12263d"
+            }
